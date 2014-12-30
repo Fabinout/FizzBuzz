@@ -10,7 +10,7 @@ import java.io.IOException;
 
 /**
  * Created by fabienlamarque on 30/12/2014,
- * inspired by: Olivier Croisier : http://www.code-story.net/
+ * inspired by: Olivier Croisier : http://www.code-story.net/     .
  */
 public class Setup {
 
