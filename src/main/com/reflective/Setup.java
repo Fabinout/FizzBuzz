@@ -22,13 +22,8 @@ public class Setup {
         try {
             cl = pool.get("java.lang.Integer");
             CtMethod toStringMethod = cl.getDeclaredMethod("toString", new CtClass[]{CtClass.intType});
-            System.out.println("CtMethod toStringMethod ");
-//            toStringMethod.setBody(getCode());
             toStringMethod.setBody(getCodeOriginal());
-            System.out.println("toStringMethod.setBody(getCode());");
             cl.writeFile(args[0]);
-            System.out.println("cl.writeFile(args[0]);");
-
         } catch (CannotCompileException e) {
             System.err.println("CannotCompileException: " + e.getMessage());
             System.err.print(e.getReason());
@@ -36,7 +31,6 @@ public class Setup {
             System.err.println("NotFoundException: " + e.getMessage());
             e.printStackTrace();
         } catch (IOException e) {
-
             System.err.println("IO Excepiton: " + e.getMessage());
             e.printStackTrace();
         } finally {
